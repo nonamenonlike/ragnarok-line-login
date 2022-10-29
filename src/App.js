@@ -6,6 +6,7 @@ import Box from './Box';
 
 function App() {
 
+  const [color, setColor] = useState("black");
   const [pictureUrl, setPictureUrl] = useState(logo);
   const [idToken, setIdToken] = useState("");
   const [displayName, setDisplayName] = useState("");
@@ -41,22 +42,31 @@ function App() {
 
   useEffect(() => {
     initLine();
+    const changeColorOnClick = () => {
+    if (color === "black") {
+      setColor("red");
+    } else {
+      setColor("black");
+    }
+  }
   }, []);
+
 
   return (
     <div className="App">
       <header className="App-header">
       <Box>
         <div style={{ textAlign: "center" }}>
-          <h1>React With LINE Login To Website Free Picture Ragnarok</h1>
+          <h3>React With LINE Login To Website Free Picture Ragnarok</h3>
           <hr/>
-          <img src={pictureUrl} width="300px" height="300px"/>
+          <img src={pictureUrl} width="150px" height="150px"/>
           {/*<p style={{ textAlign: "left", marginLeft: "20%", marginRight: "20%", wordBreak: "break-all" }}><b>id token: </b> {idToken}</p>*/}
           <p style={{ textAlign: "left", marginLeft: "20%", marginRight: "20%", wordBreak: "break-all" }}><b>display name: </b> {displayName}</p>
           {/*<p style={{ textAlign: "left", marginLeft: "20%", marginRight: "20%", wordBreak: "break-all" }}><b>status message: </b> {statusMessage}</p>*/}
           <p style={{ textAlign: "left", marginLeft: "20%", marginRight: "20%", wordBreak: "break-all" }}><b>user id: </b> {userId}</p>
-
-          <button onClick={() => logout()} style={{ width: "100%", height: 30 }}>Logout</button>
+          
+          <button changeColorOnClick={() => logout()} style={{ width: "10%", height: 30 }}>Logout</button>
+          
         </div>
       </Box>
       </header>
