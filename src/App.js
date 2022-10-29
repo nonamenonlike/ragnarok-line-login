@@ -57,7 +57,7 @@ function App() {
           {/*<p style={{ textAlign: "left", marginLeft: "20%", marginRight: "20%", wordBreak: "break-all" }}><b>status message: </b> {statusMessage}</p>*/}
           <p style={{ textAlign: "left", marginLeft: "20%", marginRight: "20%", wordBreak: "break-all" }}><b>user id: </b> {userId}</p>
 
-          <Button onClick="outline-danger">Logout</Button>{() => logout()} style={{ width: "100%", height: 30 }}
+          <button onClick={() => logout()} style={{ width: "100%", height: 30 }}>Logout</button>
         </div>
       </Box>
       </header>
