@@ -7,9 +7,9 @@ import Box from './Box';
 function App() {
 
   const [pictureUrl, setPictureUrl] = useState(logo);
-  {/*const [idToken, setIdToken] = useState("");*/}
+  const [idToken, setIdToken] = useState("");
   const [displayName, setDisplayName] = useState("");
-  {/*const [statusMessage, setStatusMessage] = useState("");*/}
+  const [statusMessage, setStatusMessage] = useState("");
   const [userId, setUserId] = useState("");
 
   const logout = () => {
