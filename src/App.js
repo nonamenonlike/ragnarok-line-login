@@ -3,8 +3,6 @@ import './App.css';
 import liff from '@line/liff';
 import { useEffect, useState } from 'react';
 import Box from './Box';
-import { Button } from "rsuite";
-import "rsuite/dist/rsuite.min.css";
 
 function App() {
 
@@ -67,7 +65,7 @@ function App() {
           {/*<p style={{ textAlign: "left", marginLeft: "20%", marginRight: "20%", wordBreak: "break-all" }}><b>status message: </b> {statusMessage}</p>*/}
           <p style={{ textAlign: "left", marginLeft: "20%", marginRight: "20%", wordBreak: "break-all" }}><b>user id: </b> {userId}</p>
           
-          <Button color="red" onClick={() => logout()} style={{ width: "10%", height: 30 }}>Logout</Button>
+          <button color="red" onClick={() => logout()} style={{ width: "10%", height: 30 }}>Logout</button>
           
         </div>
       </Box>
