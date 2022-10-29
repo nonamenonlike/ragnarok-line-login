@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import liff from '@line/liff';
 import { useEffect, useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Box from './Box';
 
 function App() {
